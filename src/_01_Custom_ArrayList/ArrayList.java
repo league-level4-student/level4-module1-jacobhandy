@@ -72,9 +72,9 @@ public class ArrayList <T>{
 				
 			}
 		}
-		for(int a = 0; a < newObject.length; a++) {
-			System.out.println(newObject[a]);
-		}
+		//for(int a = 0; a < newObject.length; a++) {
+		//	System.out.println(newObject[a]);
+		//}
 		object = newObject;
 	}
 	
