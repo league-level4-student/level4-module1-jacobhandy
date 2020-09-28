@@ -13,7 +13,7 @@ public class CustomArrayListTest {
 		list.add(0);
 		list.add(1);
 		list.add(206);
-	
+		
 		if(list.get(0) != 0) fail("list.get(0) returning improper value.");
 		if(list.get(1) != 1) fail("list.get(1) returning improper value.");
 		if(list.get(2) != 206) fail("list.get(2) returning improper value.");
@@ -40,7 +40,7 @@ public class CustomArrayListTest {
 		ArrayList<Character> list = new ArrayList<Character>();
 		list.add('D');
 		list.add('I');
-		list.add('G');
+		list.add('G'); //2
 		list.add('O');
 		
 		list.insert(2, 'E');
