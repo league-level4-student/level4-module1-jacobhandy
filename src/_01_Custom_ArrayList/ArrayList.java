@@ -29,6 +29,7 @@ public class ArrayList <T>{
 	}
 	
 	public void insert(int loc, T val) throws IndexOutOfBoundsException {
+		/*
 		T[] newObject = (T[]) new Object[object.length + 1];
 		for(int a = 0; a < newObject.length; a++) {
 			int b = a + 1;
@@ -49,6 +50,22 @@ public class ArrayList <T>{
 			System.out.println(newObject[a]);
 		}
 		object = newObject;
+	*/
+		T[] insert = (T[]) new Object[object.length + 1];
+		
+		for(int a = 0; a < insert.length; a++) {
+			if(a < loc) {
+				insert[a] = object[a];
+			}
+			else if(a > loc) {
+				insert[a] = object[a -1];
+			}
+			else {
+				insert[a] = val;
+			}
+		}
+			
+		object = insert;
 	}
 	
 	public void set(int loc, T val) throws IndexOutOfBoundsException {
