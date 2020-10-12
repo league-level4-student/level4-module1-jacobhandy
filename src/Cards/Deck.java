@@ -7,7 +7,7 @@ import java.util.Random;
 public class Deck extends ArrayList<Card> {
 	//Has a relationship: private ArrayList<Card> _cards;
 	public Deck() {
-		for(int i = Card.MIN_VALUE; i < Card.MAX_VALUE; i++) {
+		for(int i = Card.MIN_VALUE; i <= Card.MAX_VALUE; i++) {
 			Card c = new Card(i, Card.Suits.CLUBS);
 			Card d = new Card(i, Card.Suits.DIAMONDS);
 			Card h = new Card(i, Card.Suits.HEARTS);
@@ -31,13 +31,13 @@ public class Deck extends ArrayList<Card> {
 			}
 		}
 	}
-	public ArrayList<Card> deal(int count){
-		ArrayList<Card> dealt = new ArrayList<Card>();
-		if(count < size()) {
+	public Hand deal(int count){
+		Hand dealt = new Hand();
+		if(count <= size()) {
 			for(int i = 0; i < count; i++) {
-				for(int a = 0; a < count; a++) {
-					dealt.add(this.remove(a));
-				}
+				//for(int a = 0; a < count; a++) {
+					dealt.add(this.remove(0));
+				//}
 			}
 		}
 		return dealt;
